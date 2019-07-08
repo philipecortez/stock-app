@@ -1,0 +1,124 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ffff00;
+  --primary-text-color: #000;
+  --primary-light-color: #ffff5a;
+  --primary-light-text-color: #000000de;
+  --primary-dark-color: #c7cc00;
+  --primary-dark-text-color: #000000de; 
+
+  --secondary-color: #212121;
+  --secondary-text-color: #fff;
+  --secondary-light-color: #484848;
+  --secondary-light-text-color: #ffffffde;
+  --secondary-dark-color: #000;
+  --secondary-dark-text-color: #ffffffde;
+}
+
+.app {
+  background-color: var(--primary-color);
+  height: 100vh;
+  position: relative;
+
+  .top-buttons {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 1rem;
+    height: 10vh;
+
+    li {
+      font-weight: bold;
+      width: 50%;
+      text-align: center;
+
+      .login {
+        text-decoration: underline;
+        display: inline-block;
+        padding: 1rem;
+      }
+
+      .signup {
+        background-color: #8000ff;
+        color: var(--secondary-text-color);
+        padding: 1rem;
+        width: 100%;
+        display: inline-block;
+        border-radius: .4rem;
+      }
+    }
+  }
+
+  main {
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+    height: 85vh;
+
+    & > * {
+      padding: 1rem;
+    }
+
+    .search-field {
+      border: none;
+      box-shadow: 0 0 .4rem .1rem grey;
+      background-image:none;
+      width: 100%;
+      border-radius: 1rem;
+      margin: 1rem auto ;
+
+      &:focus {
+        border: 1px solid var(--secondary-color);
+        box-shadow: 0 0 .4rem .1rem #afafaf;
+        outline: none;
+
+        & + p {
+          margin-top: -2px;
+        }
+      }
+    }
+
+    .app-desctription {
+      font-weight: bold;
+      padding: .4rem;
+    }
+
+    .stocks-list {
+      list-style: none;
+      text-align: left;
+      margin: 0 auto;
+      background-color: var(--primary-light-color);
+    }
+  }
+
+  .learn-more {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    height: 5vh;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: .4rem 0;
+    border-radius: 60px 60px 0 0;
+  }
+
+}
