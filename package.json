@@ -10,7 +10,18 @@
     "react-dom": "^16.8.6",
     "react_ujs": "^2.5.0"
   },
+  "scripts": {
+    "test": "jest --rootDir app/javascript/tests/"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/setup.js"
+    ]
+  },
   "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest": "^24.8.0",
     "webpack-dev-server": "^3.7.2"
   }
 }
